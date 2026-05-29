@@ -103,6 +103,7 @@ ClinicAppointmentManagementSystem/
 │       └── pr-review.yml
 │
 └── README.md
+```
 ⚙️ How to Run
 Compile the project
 javac src/*.java
