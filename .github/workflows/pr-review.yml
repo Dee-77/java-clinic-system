@@ -1,0 +1,42 @@
+name: Java PR Review Pipeline
+
+on:
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+  build-and-test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Verify Required Files Exist
+        run: |
+          test -f src/Person.java
+          test -f src/Doctor.java
+          test -f src/Patient.java
+          test -f src/Appointment.java
+          test -f src/ClinicSystem.java
+          test -f src/Main.java
+
+      - name: Compile Java Files
+        run: |
+          javac src/*.java
+
+      - name: Run Application
+        run: |
+          java -cp src Main <<EOF
+          3
+          EOF
