@@ -106,9 +106,13 @@ ClinicAppointmentManagementSystem/
 ```
 ⚙️ How to Run
 Compile the project
+
 javac src/*.java
+
 Run the program
+
 java -cp src Main
+
 🔄 GitHub Actions CI/CD Pipeline
 
 This project includes an automated pipeline that runs on every Pull Request.
@@ -122,16 +126,25 @@ Fails if anything breaks
 This ensures the code stays clean and functional at all times.
 
 🖥️ Sample Output
+
 ===== Doctor Information =====
+
 ID: 1
+
 Name: Dr. Ahmed
+
 Age: 45
+
 Specialization: Cardiology
 
 ===== Patient Information =====
+
 ID: 101
+
 Name: Ali
+
 Age: 25
+
 Illness: Heart Disease
 
 Appointment added successfully.
